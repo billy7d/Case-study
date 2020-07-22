@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="snake.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+
 </head>
 <body>
-
-<div>Level: <label id="level"></label><br><br>
-    Score: <label id="score"></label></div>
-
 
 <canvas id="canvas" width="529" height="529" style="border: 1px black"></canvas>
 
@@ -144,11 +140,16 @@
     }
 
     function gameScore() {
-        document.getElementById("score").innerHTML = score;
+        ctx.fillStyle ="black";
+        ctx.fillText("Score: " + score,420,20) ;
+        ctx.font = "15px Courier New";
+
     }
 
     function gameLevel() {
-        document.getElementById("level").innerHTML = level;
+        ctx.fillStyle ="black";
+        ctx.fillText("Level: " + level,420,40) ;
+        ctx.font = "15px Courier New";
     }
 
     function replay() {
@@ -160,8 +161,8 @@
     function textInsideCanvas() {
         if (gameOver == true){
             ctx.fillStyle = "black";
-            ctx.font ="23px 8BITWONDERNominal";
-            ctx.fillText("GAME OVER",230,240);
+            ctx.font= "30px Courier New"
+            ctx.fillText("GAME OVER",200,240);
 
 
         }
