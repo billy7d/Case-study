@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<canvas id="canvas" width="529" height="529" style="border: 1px black"></canvas>
+<canvas id="canvas" width="529" height="529" style="border: 1px black; background-image: url('img/background.jpg')" ></canvas>
 
 <script>
 
@@ -26,7 +26,10 @@
     let feedSound  = new Audio("Sound/feed.wav");
     let crashSound = new Audio("Sound/crash.wav");
 
-    let Snake = function () {
+
+    let
+
+    Snake = function () {
         this.grid = 23;
         this.toaDoThan = [];
         this.toaDoDauRan = {x:230 , y:230}; //tdo ban dau.
@@ -140,14 +143,14 @@
     }
 
     function gameScore() {
-        ctx.fillStyle ="black";
+        ctx.fillStyle ="white";
         ctx.fillText("Score: " + score,420,20) ;
         ctx.font = "15px Courier New";
 
     }
 
     function gameLevel() {
-        ctx.fillStyle ="black";
+        ctx.fillStyle ="white";
         ctx.fillText("Level: " + level,420,40) ;
         ctx.font = "15px Courier New";
     }
@@ -160,7 +163,7 @@
     }
     function textInsideCanvas() {
         if (gameOver == true){
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "white";
             ctx.font= "30px Courier New"
             ctx.fillText("GAME OVER",200,240);
 
